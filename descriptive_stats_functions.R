@@ -48,7 +48,7 @@ med_center<-function(spdf){
   ###Weiszfeld's algorithm - from "Gmedian" package#
   gmed<-Weiszfeld(X=xydat, nitermax=999)
   ###Create new SP object - coords slot shows med center#
-  gmed_final<-SpatialPoints(gmed, proj4string=crs_aea)
+  gmed_final<-SpatialPoints(gmed, proj4string=crs_save)
 }
 ####
 
