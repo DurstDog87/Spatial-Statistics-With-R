@@ -116,7 +116,7 @@ std_ellipse<-function(spdf, mc){
   draft1<-getellipse(rx=sd_minor, ry=sd_major, mid=mcdat, angle=180-theta_deg)
   eli_poly<-Polygon(draft1)
   eli_polys<-Polygons(list(eli_poly), ID="ellipse")
-  eli_sppolys<-SpatialPolygons(Srl=list(eli_polys), proj4string=crs_aea)
+  eli_sppolys<-SpatialPolygons(Srl=list(eli_polys), proj4string=crs_save)
   angle<-ifelse(theta_deg<0, theta_deg + 180, theta_deg)
   eli_df<-as.data.frame(cbind(mcdat, sd_minor, sd_major, angle))
   rownames(eli_df)<-c("ellipse")
